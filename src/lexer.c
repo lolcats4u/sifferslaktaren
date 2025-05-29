@@ -53,6 +53,9 @@ void lexer_next_token(Lexer *lexer) {
             lexer->current_token.type = TOKEN_RPAREN;
             lexer->position++;
             break;
+        case '*':
+            lexer->current_token.type = TOKEN_MUL;
+            lexer->position++;
         default:
             lexer->current_token.type = TOKEN_ERROR;
             lexer->position++;

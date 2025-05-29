@@ -7,6 +7,10 @@ typedef enum {
     TOKEN_LPAREN,      // (
     TOKEN_RPAREN,      // )
     TOKEN_EOF,         // End of input
+    TOKEN_MINUS,
+    TOKEN_DIVISION,
+    TOKEN_MULTIPLICATION,
+    TOKEN_MUL,
     TOKEN_ERROR
 } TokenType;
 
