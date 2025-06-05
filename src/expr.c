@@ -67,8 +67,8 @@ int expr_evaluate(ExprNode *expr) {
     return expr_evaluate(expr->data.binary.left) + 
       expr_evaluate(expr->data.binary.right);
   
-  case NODE_MUL:
-    return expr_evaluate(expr->data.binary.left) -
+  case NODE_MULTIPLICATION:
+    return expr_evaluate(expr->data.binary.left) *
            expr_evaluate(expr->data.binary.right);
   default:
     return 0;

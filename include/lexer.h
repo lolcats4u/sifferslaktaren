@@ -27,7 +27,29 @@ typedef struct {
     Token current_token;
 } Lexer;
 
-void lexer_init(Lexer *lexer, const char *input);
+typedef struct {
+    Token operator;
+    int priority;
+
+} Operatior;
+
+typedef struct
+{
+    StrSlice *prev;
+    Operator operator;
+    const char *next;
+} NestedLexer;
+
+typedef struct
+{
+    int left_index_inclusive;
+    int right_index_exclusive;
+    const char *string_to_slice;
+
+} StrSlice;
+
+void lexer_with_nested_mul();
+lexer_init(Lexer *lexer, const char *input);
 void lexer_next_token(Lexer *lexer);
 void token_free(Token *token);
 

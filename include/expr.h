@@ -4,7 +4,7 @@
 typedef enum {
   NODE_CONSTANT,
   NODE_ADD,
-  NODE_MUL,
+  NODE_MULTIPLICATION,
 } NodeType;
 
 typedef struct ExprNode {
