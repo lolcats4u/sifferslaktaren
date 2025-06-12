@@ -10,8 +10,7 @@ typedef enum {
     TOKEN_MINUS,
     TOKEN_DIVISION,
     TOKEN_MULTIPLICATION,
-    TOKEN_MUL,
-    TOKEN_ERROR
+    TOKEN_ERROR,
 } TokenType;
 
 typedef struct {
@@ -25,13 +24,14 @@ typedef struct {
     const char *input;
     int position;
     Token current_token;
+    int *next;
 } Lexer;
 
 typedef struct {
     Token operator;
     int priority;
-
-} Operatior;
+    int order_matters;
+} Operator;
 
 typedef struct
 {
